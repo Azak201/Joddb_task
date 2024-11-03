@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Add User Page";
+}
+@model Users
+<h1 style="text-align: center;">@ViewData["Title"]</h1>
+
+<form asp-controller="User" asp-action="AddUser" method="post">
+<div>
+<div>name:<input type="text" asp-for="Name" placeholder="fullname" required id=""></div>
+
+<div>image:<input type="file" name="image" accept="image/*" required id=""></div>
+
+<div>phone number:<input type="number" asp-for="Number" placeholder="00962...." required id=""></div>
+
+<div>Email:<input type="email" asp-for="Email" required placeholder="example@example.com" id=""></div>
+
+<div>Password:<input type="password" asp-for="Password" placeholder="**********" id=""></div>
+<div><input type="submit" value="submit"></div>
+</div>
+
+</form>

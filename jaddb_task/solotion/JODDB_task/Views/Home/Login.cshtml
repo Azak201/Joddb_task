@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Login page";
+}
+<h1 style="text-align: center;">@ViewData["Title"]</h1>
+
+<form  asp-action="Login" method="post">
+<div>
+    <div><h2>Log IN</h2></div>
+    <div><input type="email" name="email" placeholder="insert your email" required></div>
+    <div><input type="password" name="password" placeholder="your password" required></div>
+    <div>
+        <input type="submit" value="login">
+        <a asp-controller="Home" asp-action="AddUser">dont have account?</a>
+    </div>
+    <p style="color:red;">@ViewBag.ErrorMessage</p>
+</div>
+</form>
